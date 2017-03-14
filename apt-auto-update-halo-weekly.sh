@@ -9,7 +9,7 @@ sudo touch /etc/cron.weekly/update_halo
 sudo cat <<EOT > /etc/cron.weekly/update_halo
 #!/bin/bash
 /usr/bin/apt-get update > /dev/null
-/usr/bin/apt-get upgrade cphalo > /dev/null
+/usr/bin/apt-get -y install cphalo > /dev/null
 EOT
 
 # Change file permissions to execute
