@@ -1,0 +1,18 @@
+#! /bin/bash
+#Debian/Ubuntu Linux
+# Create Halo auto update
+
+# Create /etc/cron.weekly/update_halo
+sudo touch /etc/cron.monthly/update_halo
+
+
+sudo cat <<EOT > /etc/cron.monthly/update_halo
+#!/bin/bash
+/usr/bin/apt-get update > /dev/null
+/usr/bin/apt-get upgrade cphalo > /dev/null
+EOT
+
+# Change file permissions to execute
+sudo chmod 755 /etc/cron.monthly/update_halo
+sudo chown root /etc/cron.monthly/update_halo
+sudo chgrp root /etc/cron.monthly/update_halo
