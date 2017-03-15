@@ -26,8 +26,8 @@ Windows agent and compare to the currently installed Halo Windows Agent. If the
 version on the Halo API site is newer, the script will download and install the
 new agent. The file is downloaded to the directory in which the script is
 running from. This script will need to run with Administrator privileges as it
-will be running the downloaded version of the agent. If the current version is
-already installed the script will exit with no actions.
+will be running the downloaded version installer of the agent. If the current
+version is already installed the script will exit with no actions.
 
 It is recommended if you are going to run this script to auto-update your
 installed Halo agent, then set a schedule to either run weekly, biweekly, or
