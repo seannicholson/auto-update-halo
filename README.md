@@ -3,7 +3,7 @@ Version: *1.1*
 <br />
 Author: *Sean Nicholson*
 
-# Description
+# Cron scripts
 The bash script files will create a cron job to update Halo via the system's
 package management (yum or apt). There are two files for each, one that creates
 the job to run weekly and another to run monthly. Choose the file that best
