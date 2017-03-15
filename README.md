@@ -13,6 +13,27 @@ If you are going to use these scripts in an elastic environment or your
 instances are short lived you may want to configure something similar to run
 on system boot after networking is online.
 
+#Windows Powershell script
+update_halo.ps1
+You will need to configure your Halo API Key and Secret Key on lines 2 and 3
+  >$apiKey="your_api_key_id"
+  $apiSecret="your_api_secret_key"
+
+Depending on your security configuration you may have to sign the script once
+you have configured the API Key information.
+This script will connect to the Halo API to determine the latest version of the
+Windows agent and compare to the currently installed Halo Windows Agent. If the
+version on the Halo API site is newer, the script will download and install the
+new agent. The file is downloaded to the directory in which the script is
+running from. This script will need to run with Administrator privileges as it
+will be running the downloaded version of the agent. If the current version is
+already installed the script will exit with no actions.
+
+It is recommended if you are going to run this script to auto-update your
+installed Halo agent, then set a schedule to either run weekly, biweekly, or
+monthly depending on your requirements. This can be configured in the Windows
+Task Scheduler when creating the task to run the powershell script.
+
 
 ## License
 
