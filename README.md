@@ -15,7 +15,7 @@ on system boot after networking is online.
 
 #Windows Powershell script
 update_halo.ps1
-You will need to configure your Halo API Key and Secret Key on lines 2 and 3
+You will need to configure your Halo API Key and Secret Key on lines 6 and 7
   >$apiKey="your_api_key_id"
   $apiSecret="your_api_secret_key"
 
